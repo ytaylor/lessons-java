@@ -41,7 +41,15 @@ public class Arrays {
    }
    
    public void ordenar() {
-	   
+	   for (int x = 0; x < numeros.length; x++) {
+	        for (int i = 0; i < numeros.length-x-1; i++) {
+	            if(numeros[i] < numeros[i+1]){
+	                int tmp = numeros[i+1];
+	                numeros[i+1] = numeros[i];
+	                numeros[i] = tmp;
+	            }
+	        }
+	    }
    }
    
    public void eliminar() 
@@ -56,7 +64,9 @@ public class Arrays {
 	}  
    }
    
-   public void insertar() {}
+   public void insertar() {
+	   
+   }
 	
 
 }
