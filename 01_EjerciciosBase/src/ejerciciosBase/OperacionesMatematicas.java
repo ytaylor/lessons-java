@@ -1,19 +1,19 @@
 package ejerciciosBase;
 
 /*
- * 
- *     8. Un programa que carga dos números enteros por teclado y a continuación va a mostrar un menú. 
-1.Indicar si alguno de los dos divide al otro, da igual cual al cual.
-2.Visualizar la división real de los dos.
-3.Potencia del primero elevado al segundo
-4.Salir
+ *   8. Un programa que carga dos números enteros por teclado y a 
+	continuación va a mostrar un menú. 
+	1.Indicar si alguno de los dos divide al otro, da igual cual al cual.
+	2.Visualizar la división real de los dos.
+	3.Potencia del primero elevado al segundo
+	4.Salir
  *
  * 
  * */
 
 import java.util.Scanner;
 
-public class NumerosEnteros {
+public class OperacionesMatematicas {
 	static int numero1 =-1; 
 	static int numero2 =-1; 
 

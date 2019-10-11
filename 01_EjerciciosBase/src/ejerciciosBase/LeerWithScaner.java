@@ -2,7 +2,7 @@ package ejerciciosBase;
 
 import java.util.Scanner;
 
-public class EjerciciosBase {
+public class LeerWithScaner {
 
 	public static void main(String[] args) {
 	cadena();
@@ -22,8 +22,6 @@ public class EjerciciosBase {
 
 
 	}
-	public static void parimpar() {
-		
-	}
+
 	
 }

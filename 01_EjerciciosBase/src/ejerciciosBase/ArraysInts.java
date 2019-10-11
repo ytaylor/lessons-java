@@ -13,7 +13,7 @@ Opción 6: Salir.
  * 
  * */
 
-public class Arrays {
+public class ArraysInts {
    Scanner sc = new Scanner(System.in);
    int numeros[] = new int[10];	 
    
