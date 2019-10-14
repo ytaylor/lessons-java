@@ -39,7 +39,35 @@ public class ArraysDouble {
 			System.out.println("Producto:"+nombres[i]+", "+"Precio"+precios[i]);
 			}
 		}	
+	}
+	
+	public void eliminar() {
+		System.out.println("Dime el producto");
+		String producto= sc.nextLine();
+		for (int i = 0; i < nombres.length; i++) {
+			if(nombres[i].equals(producto)) {
+				nombres[i]= null; 
+				precios[i]=0;
+				break;
+			}
 		}
+	}
+	
+	public void actualizarPrecio() {
+		System.out.println("Dime el producto");
+		String producto= sc.nextLine();
+
+		System.out.println("Dime el precio");
+		double precio= sc.nextDouble();
+		
+		for (int i = 0; i < nombres.length; i++) {
+			if(nombres[i].equals(producto)) {
+				precios[i]=precio;
+				break;
+			}
+		}
+		
+	}
 	
 	
 	
