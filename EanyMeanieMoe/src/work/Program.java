@@ -12,6 +12,7 @@ import java.util.Scanner;
  * @author alumno
  */
 public class Program {
+	
     //Declaración de la lista de nombres
     String[] nombres = new String[3];
     

@@ -42,7 +42,7 @@ public class NotaMediaAlumnos {
 				cantaprobados++;
 			}
 		}
-		double porcentaje= notas.length*100/cantaprobados;
+		double porcentaje= cantaprobados*100/notas.length;
 		System.out.println("El porcentaje de aprobados es "+ porcentaje);
 
 	}
