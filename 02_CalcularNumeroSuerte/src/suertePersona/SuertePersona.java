@@ -2,7 +2,10 @@ package suertePersona;
 
 import java.util.Scanner;
 
-/*Calcular el numero de la suerte de una persona*/
+/*
+ * Calcular el numero de la suerte de una persona
+ * 
+ * */
 
 public class SuertePersona {
 
@@ -26,19 +29,84 @@ public class SuertePersona {
 				if(!validardia) {
 				System.out.println("Debe introducir un dia válido");}
 		}while(!validarmes || !validardia);
-		
 	
-		int sumatresdigitos= dia+mes+anno; 
-		System.out.println("La suma de los tres digitos es " + sumatresdigitos);
+	
+	        System.out.println("Dime el dia");
+	    	dia = sc.nextInt();
+	    	System.out.println("Dime el mes");
+	    	mes = sc.nextInt();
+	    	System.out.println("Dime el año");
+	    	anno = sc.nextInt();
+	    	
+	    	if(mes >=1 && mes <=12) {
+			validarmes=true;
+			switch (mes) {
+			case 1:
+			case 3:
+			case 5:
+			case 7:
+			case 8:
+			case 10:
+			case 12:
+				if(dia >=1 && dia <=31)
+					validardia = true; 
+				else
+					validardia= false; 
+				break;
+			case 2:
+				if(annobisiesto(anno)) {
+				if(dia >=1 && dia <=29)
+					validardia = true; 
+				else
+					validardia= false; 
+				}else
+				{
+					if(dia >=1 && dia <=28)
+						validardia = true; 
+					else
+						validardia= false; 
+					
+				}
+				break;
+			case 4:
+			case 9:
+			case 11:
+			case 6:
+				if(dia >=1 && dia <=30)
+					validardia = true; 
+				else
+					validardia= false; 
+				break;
+			default:
+				break;
+			}
+
+			
+	    	}
+			else
+				validarmes=false; 
+	    	
+	    	if(validardia == true && validarmes == true) {
+	    	
+	    	int sumatresdigitos= dia+mes+anno; 
+			System.out.println("La suma de los tres digitos es " + sumatresdigitos);
+			
+			//Suma de los digitos del numero encontrado
+			int resultado=0; 
+			  while(sumatresdigitos > 0) {
+		            resultado += sumatresdigitos % 10;
+		            sumatresdigitos = sumatresdigitos / 10;
+		        }
+		        System.out.println("La suma es: " + resultado);
+	    	}
 		
-		//Suma de los digitos del numero encontrado
-		int resultado=0; 
-		  while(sumatresdigitos > 0) {
-	            resultado += sumatresdigitos % 10;
-	            sumatresdigitos = sumatresdigitos / 10;
-	        }
-	        System.out.println("La suma es: " + resultado);
+	    	
 	}
+	
+	
+	
+	
+	
 
 	public static boolean validarmes(int mes)
 	{
@@ -93,7 +161,7 @@ public class SuertePersona {
 		return res; 
 	}
 	
-	public static boolean annobisiesto(int anno) {
+	public static boolean annobisiesto(int anno) {	
 		if ((anno % 4 == 0) && ((anno % 100 != 0) || (anno % 400 == 0)))
 			return true;
 		else

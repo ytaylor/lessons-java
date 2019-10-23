@@ -47,4 +47,11 @@ public class NotaMediaAlumnos {
 
 	}
 	
+	public void visualizar()
+	{
+		for (int i = 0; i < notas.length; i++) {
+			System.out.print(notas[i]);
+		}
+	}
+	
 }
