@@ -12,12 +12,12 @@ public class letraDNI {
 		if(dni.length()==8){
 			int dniInteger= Integer.parseInt(dni); 
 			int numero = dniInteger%23; 
-	        String letras[] = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "j", "Z", "S", "Q", "V", "H", "L", "C", "K", "E", "F"};
-	        var letra = letras[numero];
+	        String letras[] = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
+	        String letra = letras[numero];
 	        System.out.println("La letra del DNI es "+ letra);
 		}else
 		{
-			System.out.print("La cantidd de numeros es incorrecta");
+			System.out.print("La cantidad de numeros es incorrecta");
 		}
 
 	}
