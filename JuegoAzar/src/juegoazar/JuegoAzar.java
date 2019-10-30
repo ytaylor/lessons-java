@@ -20,7 +20,6 @@ public class JuegoAzar {
 	public static void main(String[] args) {
 		
 		int numeroAleatorio, numeroUsuario, numeroIntentos=0;
-		boolean encontrado= false; 
 		Scanner sc = new Scanner(System.in);
 		
 		numeroAleatorio = (int) (Math.random() * 1000 )+ 1;
@@ -31,30 +30,27 @@ public class JuegoAzar {
 				
 				if(numeroUsuario<1 || numeroAleatorio>1000) {
 					System.out.println("El numero debe estar comprendido entre 1 y 1000");
-					encontrado = true; 
 				}
 				else {
 				if(numeroAleatorio == numeroUsuario) {
-					encontrado = true; 
 					System.out.println("Enhorabuena");
 					System.out.println("Lo ha superado con estos intentos" + numeroIntentos);
-					
+					numeroIntentos = 7;	
 				}
 				else {
-					encontrado = false; 
-					System.out.println("Numero Incorrecto");
+					if(numeroAleatorio > numeroUsuario) {
+						System.out.println("Numero Incorrecto. El numero es menor");	
+					}else
+					{
+						System.out.println("Numero Incorrecto. El numero es mayor");
+					}
 					numeroIntentos++; 
 				}
-				
-				if(numeroIntentos>8) {
-					encontrado = true; 
 				}
-				}
-			}while(!encontrado); 
+			}while(numeroIntentos>=7); 
 			
 			if(numeroIntentos>=7) {
 				System.out.println("No lo ha superado. El numero aleatorio era" + numeroAleatorio);
-
 			}
 		
 
