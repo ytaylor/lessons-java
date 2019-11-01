@@ -21,6 +21,9 @@ public class OrdenarTresNumeros {
 		System.out.println("Dime el tercero numero");
 		n3= sc.nextInt();
 		
+		//If ternario de ejemplo
+		String x = (n1>=n2 && n1>=n3)? (n2>=n3)?"n1,n2,n3": "n1,n3,n2":null; 
+		
 		if(n1>=n2 && n1>=n3) { //n1 es el mayor
 			if(n2>=n3) { //n2 segundo mayor
 				respuesta = "n1,n2,n3"; 
