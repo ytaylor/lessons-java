@@ -14,7 +14,8 @@ public class letraDNI {
 			int numero = dniInteger%23; 
 	        String letras[] = {"T", "R", "W", "A", "G", "M", "Y", "F", "P", "D", "X", "B", "N", "J", "Z", "S", "Q", "V", "H", "L", "C", "K", "E"};
 	        String letra = letras[numero];
-	        System.out.println("La letra del DNI es "+ letra);
+		String NIF = dni + letra;	
+	        System.out.println("El NIF es: "+ NIF);
 		}else
 		{
 			System.out.print("La cantidad de numeros es incorrecta");
