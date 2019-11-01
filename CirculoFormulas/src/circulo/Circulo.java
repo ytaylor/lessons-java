@@ -10,7 +10,7 @@ public class Circulo {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in); 
-		System.out.print("Dime el area del ciculo");
+		System.out.print("Dime el radio del ciculo");
 		int radio = sc.nextInt(); 
 		
 		double perimetro = 2*Math.PI*radio; 
