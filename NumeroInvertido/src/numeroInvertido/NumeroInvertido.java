@@ -20,7 +20,7 @@ public class NumeroInvertido {
 		if(numero.length()>1 && numero.length()<5) {
 		 String numeros[] = numero.split(""); 
 		 String numeroInvertido = "";
-		 for (int i = 0; i < numeros.length; i++) {
+		 for (int i = numeros.length-1; i >=0; i--) {
 			numeroInvertido = numeroInvertido+""+numeros[i];
 		}
 		 System.out.println("El numero invertido es "+ numeroInvertido);
